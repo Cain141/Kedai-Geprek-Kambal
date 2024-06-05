@@ -1,0 +1,460 @@
+tolong lihat code css saya dibawah ini, tolong perbaiki jika ada kesalahan pada codeprogram ini, juga tolong buat antara section home, about, menu, dan juga kontak itu lebih rapih seusaikan ukurannya masing masing agar terlihat lebih pas dan presisi
+
+:root {
+  --primary: rgba(78, 109, 64);
+  --bg: rgb(255, 255, 255);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: rgb(252, 250, 246);
+  /*min-height: 2000px;*/
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(167, 132, 89);
+  border-bottom: 3px solid rgb(134, 93, 34);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.7rem;
+  font-weight: 650;
+  color: rgb(64, 46, 19);
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: rgb(52, 41, 26);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.8);
+}
+
+.navbar .navbar-extra a {
+  color: rgb(52, 41, 26);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: rgb(52, 41, 26);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../IMG/gambar-geprek-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  /*background: linear-gradient(0deg, rgba(1, 1, 3, 1) 9%, 
+  rgba(133, 133, 133, 0) 50%);*/
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: rgb(121, 102, 76);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin: 1rem;
+  line-height: 1.7rem;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  color: rgb(68, 57, 40);
+  background-color: rgb(210, 183, 148);
+  border-radius: 0.6rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.8);
+}
+
+/* About Section */
+
+.about {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  color: rgba(94, 78, 56);
+}
+
+.about h2 span,
+.menu h2 span {
+  color: rgba(78, 109, 64);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 40rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: rgba(94, 78, 56);
+}
+
+.about .row .content p {
+  text-align: center;
+  color: rgb(53, 45, 35);
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+/* Menu Section */
+
+.menu {
+  padding: 5rem 7% 1.4rem;
+}
+.menu h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: rgba(94, 78, 56);
+}
+
+.menu h2 span {
+  color: rgba(78, 109, 64);
+}
+
+.menu p {
+  text-align: center;
+  max-width: 30rem;
+  color: rgb(53, 45, 35);
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 4%;
+}
+
+.menu .row .menu-card img {
+  border-radius: 25%;
+  width: 80%;
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin: 1.5rem auto 0.7rem;
+  color: rgb(70, 60, 47);
+}
+
+/* Contact Section */
+
+.contact {
+  padding: 5rem 7% 1.4rem;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: rgba(94, 78, 56);
+}
+
+.contact span {
+  color: rgba(78, 109, 64);
+}
+
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  color: rgb(53, 45, 35);
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: rgb(224, 199, 167);
+  border-radius: 1rem;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.6rem;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  padding-left: 2rem;
+  border: 1px solid rgb(77, 57, 33);
+  border-radius: 1.5rem;
+}
+
+.contact .row form .input-group input {
+  width: 90%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: rgb(59, 58, 58);
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: rgb(59, 58, 58);
+  background-color: rgb(167, 132, 89);
+  cursor: pointer;
+  border-radius: 1.5rem;
+}
+
+/* Footer */
+
+footer {
+  background-color: rgb(167, 132, 89);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: rgb(50, 49, 49);
+}
+
+footer .links {
+  margin-top: 1.5rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: rgb(20, 16, 16);
+  font-weight: 710;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: rgb(52, 41, 26);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .menu p {
+    font-size: 1.3rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
