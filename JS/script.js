@@ -1,18 +1,37 @@
-// Toggle class active
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburgerMenu = document.getElementById("hamburger-menu");
+  const navbarNav = document.querySelector(".navbar-nav");
+  const navbarExtraIcons = document.querySelectorAll(".navbar-extra .icon");
 
-const navbarNav = document.querySelector(".navbar-nav");
-
-// ketika humburger menu di klik
-document.querySelector("#hamburger-menu").onclick = () => {
-  navbarNav.classList.toggle("active");
-};
-
-// klik di luar sidebar untuk menghilangkan nav
-
-const hamburger = document.querySelector("#hamburger-menu");
-
-document.addEventListener("click", function (e) {
-  if (!hamburger.contains(e.target) && !navbarNav.contains(e.targer)) {
-    navbarNav.classList.remove("active");
+  function checkScreenWidth() {
+    if (window.innerWidth <= 768) {
+      navbarExtraIcons.forEach((icon) => {
+        icon.style.display = "block";
+      });
+    } else {
+      navbarExtraIcons.forEach((icon) => {
+        icon.style.display = "none";
+      });
+    }
   }
+
+  // Initial check
+  checkScreenWidth();
+
+  // Check on resize
+  window.addEventListener("resize", checkScreenWidth);
+
+  // Toggle navbar on hamburger menu click
+  hamburgerMenu.addEventListener("click", function () {
+    navbarNav.classList.toggle("active");
+  });
+
+  // Close the navbar when a link is clicked (optional)
+  navbarNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", function () {
+      if (window.innerWidth <= 768) {
+        navbarNav.classList.remove("active");
+      }
+    });
+  });
 });

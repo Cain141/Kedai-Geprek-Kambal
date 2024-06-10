@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="CSS/style.css" />
 
     <!-- Feather Icons -->
-    <script defer src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <!-- Navbar Start -->
@@ -32,9 +32,13 @@
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        <a href="#" id="search"><i class="icon" data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"
+          ><i class="icon" data-feather="shopping-cart"></i
+        ></a>
+        <a href="#" id="hamburger-menu"
+          ><i class="icon" data-feather="menu"></i
+        ></a>
       </div>
     </nav>
     <!-- Navbar End -->
@@ -145,13 +149,14 @@
 
       <div class="row">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.478949799!2d106.829518!3d-6.229746499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta!5e0!3m2!1sen!2sid!4v1717184132269!5m2!1sen!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.82551262722313!2d106.80655122633956!3d-6.183707099999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f68591f7715f%3A0x7ba869f52c7775ac!2sJl.%20Kota%20Bambu%20Utara%20III%20No.53%2C%20RT.5%2FRW.4%2C%20Kota%20Bambu%20Utara%2C%20Kec.%20Palmerah%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011420!5e0!3m2!1sen!2sid!4v1717626989085!5m2!1sen!2sid"
+          width="420"
+          height="430"
+          style="border: 0"
           allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="map"
-        >
-        </iframe>
+          referrerpolicy="map"
+        ></iframe>
 
         <form action="">
           <div class="input-group">
@@ -176,15 +181,18 @@
     <!-- Footer Section Start -->
 
     <footer>
+      <h2><span>Pesan</span> Online Lewat</h2>
       <div class="socials">
         <a
           href="https://shopee.co.id/universal-link/now-food/shop/21605997?deep_and_deferred=1&shareChannel=copy_link"
         >
           <img src="IMG/icon-online-shop.svg" alt="Online Shop Icon" />
         </a>
-
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="facebook"></i></a>
+        <a
+          href="https://r.grab.com/g/6-20240602_123655_0EB760E08A0E4492A9FFAAB211024BEC_MEXMPS-6-C3U1FFLWTAL2LN"
+        >
+          <img src="IMG/logo-grabfood_11zon.png" alt="GrabFood Icon" />
+        </a>
       </div>
 
       <div class="links">
@@ -193,23 +201,19 @@
         <a href="#menu">Menu</a>
         <a href="#contact">Kontak</a>
       </div>
-
       <div class="credit">
-        <p>Created by <a href="">dimascandrapratama</a>. | &copy; 2024</p>
+        <p>Created by <a href="">Dimas Candra Pratama</a>. | &copy; 2023.</p>
       </div>
     </footer>
 
     <!-- Footer Section End -->
 
-    <!-- Feather Icons Initialization -->
+    <!-- Feather Icons -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        feather.replace();
-      });
+      feather.replace();
     </script>
 
     <!-- My Javascript -->
     <script src="JS/script.js"></script>
   </body>
 </html>
- 
